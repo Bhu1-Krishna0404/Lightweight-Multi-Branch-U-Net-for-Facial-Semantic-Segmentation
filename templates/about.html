@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Skin Cancer Detection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: url('static/bg2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* h1 {
+            background-color: rgba(0, 115, 230, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin: 0;
+            font-size: 2.5rem;
+        } */
+         h1{
+            margin-left: 700px;
+         }
+
+        .container {
+            width: 50%;
+            margin: 0;
+            padding: 40px;
+            margin-left: 450px;
+            background: transparent;
+            box-sizing: border-box;
+            text-align: justify;
+            font-weight: bold;
+            color: white;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+         /* Navbar styles */
+         .navbar {
+            background: transparent;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler {
+            display: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #f1f1f1;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            background-color: #fff;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        /* Responsive navbar */
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                display: inline-block;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background: linear-gradient(to bottom, #6a11cb, #25fc50);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                gap: 10px;
+                padding: 10px 0;
+            }
+
+            .navbar-toggler.active + .navbar-nav {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="margin-right: 1000px;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" >
+                <li class="nav-item ">
+                    <a class="nav-link" style="font-size: 30px;" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" style="font-size: 30px;" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 30px;" href="{{ url_for('register') }}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 30px;" href="{{ url_for('login') }}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Human Face Segmentation</h1>
+
+    <div class="container">
+        <h2>Abstract</h2>
+        <p>Face Segmentation is a critical research area in computer vision, with facial feature extraction playing a key role in improving accuracy. 
+            This paper focuses on the application of semantic segmentation methods for facial feature extraction. The structure and parameter count 
+            of the model significantly impact the performance of these tasks. To enhance accuracy and efficiency, we propose the use of the U-Net 
+            architecture for semantic segmentation in face recognition. The U-Net model is employed due to its ability to effectively capture spatial 
+            information through an encoder-decoder structure, which is crucial for precise segmentation of facial features. In our approach, we 
+            incorporate multi-scale feature extraction to balance between accuracy and the number of parameters, using large convolutional kernels 
+            for an expanded receptive field. Additionally, we use a channel attention mechanism to optimize feature aggregation from different depths, 
+            and depthwise separable convolution to reduce the computational burden. Our experimental results demonstrate that the proposed model, with 
+            fewer parameters, achieves high accuracy in semantic segmentation tasks for facial feature extraction.</p>
+    </div>
+</body>
+</html>
